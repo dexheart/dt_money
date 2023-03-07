@@ -1,27 +1,44 @@
 {
-  "transactions": [{
-    "id": 1,
-    "description": "Desenvolvimento de site",
-    "type": "income",
-    "category": "Venda",
-    "price": 14000,
-    "createAt": "2023-03-06T19:28:11.565Z"
-  },
-  {
-    "id": 2,
-    "description": "Hamburger",
-    "type": "outcome",
-    "category": "Alimentação",
-    "price": 50,
-    "createAt": "2023-03-06T19:28:11.565Z"
-  },
-  {
-    "id": 3,
-    "description": "Ignite Rocketseat",
-    "type": "outcome",
-    "category": "Educação ",
-    "price": 1980,
-    "createAt": "2023-03-06T19:28:11.565Z"
-  }
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 14000,
+      "createdAt": "2023-03-06T19:28:11.565Z"
+    },
+    {
+      "id": 2,
+      "description": "Hamburger",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 50,
+      "createdAt": "2023-03-06T19:28:11.565Z"
+    },
+    {
+      "id": 3,
+      "description": "Ignite Rocketseat",
+      "type": "outcome",
+      "category": "Educação ",
+      "price": 1980,
+      "createdAt": "2023-03-06T19:28:11.565Z"
+    },
+    {
+      "description": "Batata Frita",
+      "price": 11,
+      "category": "Alimenção",
+      "type": "outcome",
+      "createdAt": "2023-03-07T19:24:35.305Z",
+      "id": 4
+    },
+    {
+      "description": "Pratinho de Rua",
+      "price": 20,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-03-07T19:40:49.867Z",
+      "id": 5
+    }
   ]
 }

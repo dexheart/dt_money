@@ -1,41 +1,38 @@
-import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from "phosphor-react";
-import { useSummary } from "../../hooks/useSummary";
-import { SummaryCard, SummaryContainer } from "./styles";
+import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from 'phosphor-react'
+import { useSummary } from '../../hooks/useSummary'
+import { SummaryCard, SummaryContainer } from './styles'
 
-export function Summary(){
+export function Summary() {
+  const summary = useSummary()
 
-    const summary = useSummary()
+  return (
+    <SummaryContainer>
+      <SummaryCard>
+        <header>
+          <span>Entradas</span>
+          <ArrowCircleUp size={32} color="#00b37e" />
+        </header>
 
-    return(
-        <SummaryContainer>
-            <SummaryCard>
-                <header>
-                    <span>Entradas</span>
-                    <ArrowCircleUp size={32} color="#00b37e" />
-                </header>
+        <strong>{summary.income}</strong>
+      </SummaryCard>
 
-                <strong>{summary.income}</strong>
-            </SummaryCard>
+      <SummaryCard>
+        <header>
+          <span>Saídas</span>
+          <ArrowCircleDown size={32} color="#f75a68" />
+        </header>
 
-            <SummaryCard>
-                <header>
-                    <span>Saídas</span>
-                    <ArrowCircleDown size={32} color="#f75a68" />
-                </header>
+        <strong>{summary.outcome}</strong>
+      </SummaryCard>
 
-                <strong>{summary.outcome}</strong>
-            </SummaryCard>
+      <SummaryCard variant="green">
+        <header>
+          <span>Total</span>
+          <CurrencyDollar size={32} color="#fff" />
+        </header>
 
-            <SummaryCard variant="green">
-                <header>
-                    <span>Total</span>
-                    <CurrencyDollar size={32} color="#fff" />
-                </header>
-
-                <strong>{summary.total}</strong>
-            </SummaryCard>
-
-            
-        </SummaryContainer>
-    )
+        <strong>{summary.total}</strong>
+      </SummaryCard>
+    </SummaryContainer>
+  )
 }
