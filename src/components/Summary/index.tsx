@@ -1,38 +1,41 @@
-import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from 'phosphor-react'
-import { useSummary } from '../../hooks/useSummary'
-import { SummaryCard, SummaryContainer } from './styles'
+import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from "phosphor-react";
+import { useSummary } from "../../hooks/useSummary";
+import { SummaryCard, SummaryContainer } from "./styles";
 
-export function Summary() {
-  const summary = useSummary()
+export function Summary(){
 
-  return (
-    <SummaryContainer>
-      <SummaryCard>
-        <header>
-          <span>Entradas</span>
-          <ArrowCircleUp size={32} color="#00b37e" />
-        </header>
+    const summary = useSummary()
 
-        <strong>{summary.income}</strong>
-      </SummaryCard>
+    return(
+        <SummaryContainer>
+            <SummaryCard>
+                <header>
+                    <span>Entradas</span>
+                    <ArrowCircleUp size={32} color="#00b37e" />
+                </header>
 
-      <SummaryCard>
-        <header>
-          <span>Saídas</span>
-          <ArrowCircleDown size={32} color="#f75a68" />
-        </header>
+                <strong>{summary.income}</strong>
+            </SummaryCard>
 
-        <strong>{summary.outcome}</strong>
-      </SummaryCard>
+            <SummaryCard>
+                <header>
+                    <span>Saídas</span>
+                    <ArrowCircleDown size={32} color="#f75a68" />
+                </header>
 
-      <SummaryCard variant="green">
-        <header>
-          <span>Total</span>
-          <CurrencyDollar size={32} color="#fff" />
-        </header>
+                <strong>{summary.outcome}</strong>
+            </SummaryCard>
 
-        <strong>{summary.total}</strong>
-      </SummaryCard>
-    </SummaryContainer>
-  )
+            <SummaryCard variant="green">
+                <header>
+                    <span>Total</span>
+                    <CurrencyDollar size={32} color="#fff" />
+                </header>
+
+                <strong>{summary.total}</strong>
+            </SummaryCard>
+
+            
+        </SummaryContainer>
+    )
 }
